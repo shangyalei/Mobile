@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top:-50px;
+            margin-left:-50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box"></div>
+
+
+<script src="zepto.min.js"></script>
+<script>
+
+    $('#box').singleTap(function(ev){
+        $(this).animate({
+            rotate:Math.floor(Math.random()*1000)+"deg"
+        },1000,'linear',function(){
+            this.style.webkitTransform='rotate(0deg)';
+
+        });
+    });
+
+    $('#box').on('touchstart',function(){
+        $(this).css('background','blue');
+    });
+
+    $.ajax({
+        url:'',
+        type:'get',
+        dataType:'json',
+        cache:false,
+        success:function(){
+    }
+    });
+
+
+   /*
+   //zepto.js计算rem值
+   $(window).on('resize',resize).trigger('resize');
+    function resize(){
+        var windowW=$(window).width(),
+            designW=640,
+            htmlFont=windowW/designW*100;
+        if(windowW>designW){
+            htmlFont=100;
+            $('.musicBox').css('margin','0 auto');
+        }
+        $('html').css('fontSize',htmlFont);
+    }*/
+
+
+
+
+
+</script>
+</body>
+</html>

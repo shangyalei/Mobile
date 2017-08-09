@@ -1,0 +1,43 @@
+REM响应式布局
+-->针对HTML的fontSize的值进行动态计算的
+使用步骤
+    1)拿到设计稿
+    2)在样式中，给HTML设定一个fontSize的值(以好计算为准，这里以100px为例);
+    3)写页面样式 完全按照设计稿的尺寸来写、高度、宽度、字体大小、margin/padding
+    4)把像素值转换为rem,转换方式为像素值/100
+    5)真实项目中的最外层盒子的宽度用margin设置
+    6)根据当前屏幕的宽度和设计稿的宽度来计算我们的HTML的fontSize的值
+    公式：
+    手机屏幕宽度/设计稿的宽度*100
+    得出HTML的fontSize应该在不同屏幕下值应该是多少
+    //使用JS自动计算
+     (function(){
+                var desW=640,
+                    winW=document.documentElement.clientWidth,
+                    ratio=winW/desW;
+
+                document.documentElement.style.fontSize=ratio*100+'px';
+            })();
+
+
+    设计稿：640
+    手机：320
+
+    320/640*100
+
+
+    PC端访问移动端的，跳转到PC端
+    移动端访问pc端的，跳转到移动端
+
+    跳转:window.location.href='url';
+
+    检测条件：
+
+
+
+
+
+
+
+
+

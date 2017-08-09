@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //localStorage的使用
+    //存储,可以跨页面访问了
+    //以key:value的形式存储
+    //key不能重复，value为字符串类型
+    localStorage.setItem('age',7);
+    //获取
+    localStorage.getItem('age');
+
+    var obj = {age:"珠峰"};
+
+
+    //把对象转化为字符串的方法(JSON格式)
+    console.log(JSON.stringify(obj));
+
+    //移除
+    localStorage.removeItem('age');
+
+    //把当前源下所有的存储记录都清除掉
+    localStorage.clear();
+
+    //查看,记录一共存储了多多少条数据
+    console.log(localStorage.length);
+
+    //通过索引为0的那一项的key值
+    console.log(key(0));
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

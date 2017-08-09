@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="lib/cookie.js"></script>
+<script src="lib/md5.js"></script>
+
+<script>
+
+    //escape  中文传输过程中会出现乱码
+
+    var str = "珠峰培训";
+    //给中文字符编码
+    var n=escape(str);
+
+    console.log(n);
+    //解码
+    var m = unescape(n);
+    console.log(m);
+
+    //用户信息加密
+    var name = "珠峰";
+    var res=hex_md5(name);
+    console.log(res);
+
+
+
+</script>
+
+
+
+</body>
+</html>

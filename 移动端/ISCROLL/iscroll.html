@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/reset.min.css">
+    <style>
+        html,body{
+            width: 100%;
+            height:100%;
+            overflow: hidden;
+            color:#000;
+            font-size:14px;
+        }
+        html{
+            font-size:100px;
+        }
+        .header{
+            height: 1rem;
+            line-height:1rem;
+            background-color: darkgrey;
+        }
+        .header span{
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+        /*加了iscroll后外部容器的样式*/
+        .content{
+            /*让它与头部分离*/
+            overflow: hidden;
+            /*控制滚动条，不让它跑出容器*/
+            position: relative;
+            background:blue;
+        }
+        .content ul{
+            background: darkgrey;
+        }
+        .content ul li{
+            height: .5rem;
+            line-height:.5rem;
+            border-bottom: .01rem dashed #dddddd;
+        }
+        .content li:last-child{
+            border-bottom: none;
+        }
+        .content li:nth-child(even){
+            background: #eee;
+        }
+        .content li span{
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+        /*设置滚动条的样式*/
+        .iScrollIndicator{
+            opacity: .5;
+        }
+
+    </style>
+    <script>
+        var desW=640;
+        var winW=document.documentElement.clientWidth;
+        var ratio=winW/desW;
+
+        document.documentElement.style.fontSize=ratio*100+"px";
+
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <h1>
+        <span>编号</span>
+        <span>姓名</span>
+        <span>性别</span>
+        <span>分数</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+         <li>
+             <span>001</span>
+             <span>尚亚磊</span>
+             <span>男</span>
+             <span>100</span>
+         </li>
+        <li>
+            <span>002</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>003</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>004</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>005</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>006</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>007</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>008</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>009</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>010</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>011</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>012</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>013</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>014</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>015</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>016</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>017</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>018</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>019</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>020</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>021</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>022</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>023</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>024</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>025</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>026</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>027</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>028</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>029</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>030</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>031</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>032</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>033</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>034</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>035</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>036</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>037</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>038</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>039</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>040</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>041</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>042</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>043</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>044</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>045</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>046</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>047</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>048</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>049</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>050</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>051</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+        <li>
+            <span>052</span>
+            <span>尚亚磊</span>
+            <span>男</span>
+            <span>100</span>
+        </li>
+    </ul>
+</section>
+
+<script src="lib/iscroll-5.1.3.min.js"></script>
+<script src="lib/zepto.min.js"></script>
+<script>
+//iscroll.js是局部滚动插件，不用再使用定位
+//它只对实例的第一个容器实现滚动，也就是它里面只能有一个子元素
+//1.首先确定滚动区域的高度
+//无论是横向还是竖向滚动，都需要把最外层的高度和宽度设置好
+var $content=$('.content');
+var $header=$('.header');
+$content.css('height',document.documentElement.clientHeight-$header[0].offsetHeight);
+
+//创建iscroll的实例
+var myIscroll= new IScroll('.content',{
+    //显示滚动条,默认是不显示的
+    scrollbars:true,
+    //支持鼠标滚动
+    mouseWheel:true,
+    //禁止边界反弹
+    bounce:true,
+    //滚动条渐隐渐现
+    fadeScrollbars:true,
+    //iscroll为了防止用户滑动过程中的误操作
+    //禁止了所有的click事件，开启即可
+    click:true
+});
+
+//当滚动区域的内容发生改变的时候，我们
+//让当前实例刷新一下，这样的话滚动区域的相关值都会
+//跟着重新计算(滚动条会根据数据的多少变化)
+myIscroll.refresh();
+
+//用多长时间滚动到某个元素的具体位置
+//myIscroll.scrollToElement(ele,time);
+//myIscroll.scrollTo(x,Y,time);
+//myIscroll.scrollTo(0,50,300);
+//滚动到最后一个元素
+var $li=$content.find('li');
+myIscroll.scrollToElement($li[$li.length-1],300);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
